@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed abdullah portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+   
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f9fafb;
+    color:#222;
+    line-height:1.6;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#0ea5e9;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    top:0;
+}
+
+nav h1{
+    font-weight:700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav h2{
+    color: white;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#0ea5e9;
+}
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:#0ea5e9;
+}
+
+.hero p{
+    max-width:600px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    max-width:1100px;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-image img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    border:5px solid white;
+}
+
+.btn{
+    background:#0ea5e9;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
+
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:28px;
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    position: relative;
+    background:white;
+    padding:30px;
+    width:280px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card:hover::after{
+    content:"✨";
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    font-size:24px;
+    animation:sparkle 0.6s ease-in-out infinite alternate;
+}
+@keyframes sparkle{
+    from { transform:scale(1); }
+    to { transform:scale(1.3); }
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:white;
+}
+
+
+@media(max-width:768px){
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image{
+        margin-top:30px;
+    }
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#contact{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    text-align:left;
+    font-size:16px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:10px;
+    width:250px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.contact-form textarea{
+    height:80px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+ 
+  <nav>
+    <h2>Mohamed Abdullah</h2>
+    <ul>
+        <li><a href="#">Home <style></style></a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#projects" onclick="">Projects</a></li>
+        <li><a href="#contact" onclick="">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-container">
+
+    <div class="hero-text">
+    <h1  C>Hi, I'm <span>Mohamed Abdullah</span></h1>
+    <p id="typing"></p>
+    <a href="#projects" class="btn">View My Work</a>
+    
+    </div>
+
+    <div class="hero-image">
+        <img src="myphoto.png" alt="Mohamed Abdullah"
+    </div>
+    
+    </div>
+
+</section>
+
+<section id="projects" class="section">
+    <h2>Featured Projects</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>AI PCB Fault Detection</h3>
+            <p>Cloud-based AI system for detecting PCB defects using ESP32 image transmission.</p>
+        </div>
+
+        <div class="card">
+            <h3>IoT Security Scanner</h3>
+            <p>Network scanner that detects unsecured IoT devices and suggests improvements.</p>
+        </div>
+
+        <div class="card">
+            <h3>Smart SOS System</h3>
+            <p>Emergency response system using A9G module and ESP32 for real-time tracking.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <p><strong>Name:</strong> Mohamed Abdullah</p>
+            <p><strong>Email:</strong> mohamedabdullah@gmail.com</p>
+            <p><strong>Phone:</strong> +91 8610302860</p>
+            <p><strong>Location:</strong> Madurai, India</p>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Mohamed Abdullah | All Rights Reserved
+</footer>
+ <script src="portfolio.js"></script>
+
+
+</body>
+</html>
